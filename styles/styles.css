@@ -8,6 +8,7 @@
   --accent-color: #2196f3;
   --footer-contacts: rgba(255, 255, 255, 0.6);
   --portfolio-works: #eeeeee;
+  --us-distance: 94px;
 }
 p,
 h1,
@@ -54,7 +55,7 @@ body {
   color: var(--secondary-text-color);
 }
 .container {
-  width: 1170px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -62,6 +63,11 @@ body {
 /* NAV */
 .header {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 nav {
   display: flex;
@@ -74,11 +80,6 @@ nav {
 .contacts {
   display: flex;
   margin-left: auto;
-}
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .contacts .nav-item:not(:last-child),
 .site-nav .nav-item:not(:last-child) {
@@ -96,7 +97,7 @@ nav {
 }
 .logo-web {
   color: var(--accent-color);
-  padding-top: 25px;
+  padding-top: 24px;
   padding-bottom: 25px;
 }
 .logo-studio {
@@ -131,12 +132,14 @@ nav {
 /* HERO */
 .hero {
   background-color: var(--background-hero-footer);
-  margin-bottom: 94px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-tittle {
   max-width: 696px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -144,8 +147,6 @@ nav {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
-  padding-top: 200px;
-  padding-bottom: 30px;
 }
 .button {
   font-family: inherit;
@@ -153,6 +154,7 @@ nav {
   font-size: 16px;
   line-height: calc(30 / 16);
   display: flex;
+  display: block;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -164,11 +166,7 @@ nav {
   cursor: pointer;
   min-width: 216px;
   padding: 10px 32px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.button-item {
-  padding-bottom: 200px;
+  margin: 0 auto;
 }
 .button:hover,
 .button:focus {
@@ -220,14 +218,14 @@ nav {
   color: var(--primary-text-color);
 }
 .features-head {
-  margin-bottom: 94px;
+  padding: var(--us-distance) 0;
 }
 /* OUR WORK */
 .our-work {
-  margin-bottom: 94px;
+  padding-bottom: var(--us-distance);
 }
 .our-work-head {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .our-work-item {
   width: calc((100%-60px) / 3);
@@ -239,6 +237,9 @@ nav {
 }
 
 /* OUR TEAM */
+.team {
+  padding: var(--us-distance) 0;
+}
 .our-team-list {
   display: flex;
   gap: 30px;
@@ -250,8 +251,7 @@ nav {
   background-color: var(--background-our-team);
 }
 .our-team {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .section.team p,
 .section.team h3 {
@@ -278,17 +278,17 @@ nav {
 /*Footer section*/
 .footer {
   background-color: var(--background-hero-footer);
+  padding: 60px 0;
 }
 .footer .logo-studio {
   color: var(--white-color);
 }
-.footer-cont {
-  padding-top: 60px;
+.footer .logo-web {
+  display: flex;
+  padding: 0;
+  margin-bottom: 20px;
 }
-.footer-list {
-  margin-top: 20px;
-  padding-bottom: 60px;
-}
+
 .footer .adress,
 .footer .contact {
   text-decoration: none;
@@ -303,16 +303,13 @@ nav {
 .footer .contact {
   color: var(--footer-contacts);
 }
-.adress {
-  margin-bottom: 9px;
-}
-.tel {
+.footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
 /*Porrtfolio*/
 .our-works-section {
-  margin: 94px 0px;
+  padding: var(--us-distance) 0px;
 }
 .our-works-button {
   font-family: inherit;
@@ -323,7 +320,6 @@ nav {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   border: none;
-
   height: 38px;
   left: 593px;
   top: 174px;
@@ -341,11 +337,7 @@ nav {
   margin-right: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 34px;
-  padding-bottom: 16px;
-}
-.our-works-item {
-  padding-bottom: 16px;
+  margin-bottom: 50px;
 }
 .our-works-button:hover,
 .our-works-button:focus {
@@ -358,8 +350,7 @@ nav {
   border-radius: 4px;
 }
 .example-name {
-  margin-bottom: 6px;
-
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -367,8 +358,6 @@ nav {
   color: var(--black-color);
 }
 .example-descr {
-  margin-top: 4px;
-  margin-bottom: 20px;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
@@ -388,5 +377,4 @@ nav {
   padding: 20px 24px;
   border: 1px solid rgba(238, 238, 238, 1);
   border-top: none;
-  white-space: nowrap;
 }
